@@ -21,9 +21,8 @@ const images = [{
 const list = document.querySelector('#gallery');
 
 images.forEach(item => {
-        list.insertAdjacentHTML('beforeend', '<li class="gallery__item"></li>');
-        list.insertAdjacentHTML('beforeend', `<img src =${item.url} alt=${item.alt} width=400 height=320>`);  
-});
+        list.insertAdjacentHTML('beforeend', `<li class="gallery__item"><img src =${item.url} alt=${item.alt} width=400 height=320></li>`);
+      });
 
 list.style.listStyle = 'none';
 list.style.display = 'flex';
