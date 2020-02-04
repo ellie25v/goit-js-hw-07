@@ -12,7 +12,7 @@ validationInput.setAttribute("data-length", 6);
 
 function onBlur(e) {
     
-    if (validationInput.value.length == validationInput.getAttribute('data-length')) { 
+    if (validationInput.value.length === Number(validationInput.getAttribute('data-length'))) { 
         validationInput.classList.remove('invalid');
         validationInput.classList.add("valid");
     }
