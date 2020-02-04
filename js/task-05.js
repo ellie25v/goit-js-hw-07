@@ -8,7 +8,6 @@ const name = document.querySelector('#name-output');
 input.addEventListener("input", onInput);
 
 function onInput(e) {
-    console.log(e);
     if (!input.value) {
         name.textContent = 'незнакомец';
     } else {

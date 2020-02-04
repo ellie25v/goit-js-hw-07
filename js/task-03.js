@@ -18,11 +18,15 @@ const images = [{
         alt: 'Group of Horses Running',
     },
 ];
+
 const list = document.querySelector('#gallery');
+const fragment = document.createDocumentFragment();
 
 images.forEach(item => {
-        list.insertAdjacentHTML('beforeend', `<li class="gallery__item"><img src =${item.url} alt=${item.alt} width=400 height=320></li>`);
-      });
+    fragment.insertAdjacentHTML('beforeend', `<li class="gallery__item"><img src =${item.url} alt=${item.alt} width=400 height=320></li>`);
+});
+
+list.append(fragment);
 
 list.style.listStyle = 'none';
 list.style.display = 'flex';
