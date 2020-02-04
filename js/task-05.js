@@ -5,15 +5,6 @@
 const input = document.querySelector('#name-input');
 const name = document.querySelector('#name-output');
 
-// input.oninput = function() {
-//     if (!input.value) { 
-//     name.textContent = 'незнакомец';
-//     }
-//     else {
-//         name.textContent = input.value;
-//     }
-// }
-
 input.addEventListener("input", onInput);
 
 function onInput(e) {
