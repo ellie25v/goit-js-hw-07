@@ -10,11 +10,10 @@ inputFontSize.setAttribute('min', 20);
 inputFontSize.setAttribute('max', 70);
 inputFontSize.setAttribute('step', 5);
 
-inputFontSize.addEventListener('change', onInput)
+inputFontSize.addEventListener('input', onInput)
 
 
 function onInput(e) {
-    console.log('inputFontSize.value :', inputFontSize.value);
     if (inputFontSize.value) {
         abrakadabra.style.fontSize = `${inputFontSize.value}px`;
     }
