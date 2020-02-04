@@ -10,7 +10,7 @@ const ingredients = [
   ];
 
 const list = document.querySelector('#ingredients');
-let fragment = document.createDocumentFragment();
+const fragment = document.createDocumentFragment();
 ingredients.forEach(item => {
     let li = document.createElement('li');
     li.textContent = item;
