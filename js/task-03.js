@@ -22,18 +22,9 @@ const images = [{
 const list = document.querySelector('#gallery');
 const fragment = document.createDocumentFragment();
 
-images.forEach(item => {
-    const li = document.createElement('li.gallery__item');
-    fragment.append(li);
-    const img = document.createElement('img');
-    img.setAttribute('src', `${item.url}`);
-    img.setAttribute('alt', `${item.alt}`);
-    img.setAttribute('width', `400`);
-    li.append(img);
-    // fragment.insertAdjacentHTML('beforeend', `<li class="gallery__item"><img src =${item.url} alt=${item.alt} width=400 height=320></li>`);
-});
+const itemList = images.reduce((acc, item) => acc + `<li class="gallery__item"><img src =${item.url} alt=${item.alt} width=400 height=320></li>`, '')
 
-list.insertAdjacentElement('beforeend', '<fragment>');
+list.insertAdjacentHTML('beforeend',itemList);
 
 list.style.listStyle = 'none';
 list.style.display = 'flex';
